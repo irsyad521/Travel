@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 7%;
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar .logo {
+  color: #395144;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+}
+.navbar .logo span {
+  color: #252926;
+}
+
+.navbar .navigasi a {
+  display: inline-block;
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  color: #083a05;
+  padding: 1rem;
+  transition: 1s ease-out;
+  font-weight: 700;
+}
+
+.navbar .navigasi a:hover {
+  color: #010500;
+}
+
+.navbar .navigasi a::after {
+  content: " ";
+  border-bottom: 2px solid #62b6b7;
+  padding-bottom: 0.1rem;
+  display: block;
+  transform: scale(0);
+  transform-origin: 0 0;
+  transition: 0.3s;
+}
+
+.navbar .navigasi a:hover::after {
+  transform: scale(1);
+}
+
+#menu {
+  display: none;
+}
+
+/* Hero image */
+
+.Home {
+  height: 100vh;
+  width: 100%;
+  background-color: #b3ffae;
+  background-image: url(gambar/radoslav-bali-ca3d4FYDf84-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.2;
+  color: white;
+}
+
+.Home h1 {
+  font-family: "Indie Flower", cursive;
+  font-size: 4rem;
+  padding: 0;
+}
+
+.Home .text {
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.Home .now {
+  padding: 1rem;
+  background-color: #139483;
+  border-radius: 0 1rem 0 1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+
+.Home .now:hover {
+  padding: 1rem;
+  background-color: crimson;
+  border-radius: 0 1rem 0 1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
+}
+
+/* About */
+
+.About {
+  padding: 6rem 0;
+}
+.About h1 {
+  text-align: center;
+  color: #139483;
+  font-size: 3rem;
+  font-family: "Indie Flower", cursive;
+  padding: 1rem;
+}
+
+.About .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+}
+
+.About .row .img {
+  padding: 1rem;
+}
+
+.About .row .img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  flex: 1;
+  filter: contrast(110%);
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.About .row .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+.About .row .text p {
+  text-indent: 0.8rem;
+  padding-bottom: 0.5rem;
+  text-align: justify;
+  font-weight: 200;
+}
+
+/* media query */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+
+  .About .row {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .About .row .img img {
+    display: block;
+    flex: 1;
+    filter: contrast(110%);
+    border-radius: 0.3rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navigasi {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    right: -150px;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+  }
+  .navbar .navigasi.active {
+    right: 0px;
+  }
+
+  /* about */
+
+  .About .row {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 45%;
+  }
+}
