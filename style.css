@@ -13,7 +13,6 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  height: 5000px;
 }
 
 .navbar {
@@ -128,7 +127,8 @@ body {
   background: linear-gradient(to bottom, rgb(225, 244, 220), #fff 30%);
 }
 .About h1,
-.Destination h1 {
+.Destination h1,
+.Contact h1 {
   text-align: center;
   color: #139483;
   font-size: 3rem;
@@ -209,17 +209,61 @@ body {
   overflow: hidden;
   padding: 1rem;
   background-color: #fff;
-  transform: scale(1.2);
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.Destination .row .foto:hover {
+  transform: scale(1.1) translateY(-2rem);
+  box-shadow: 0px 20px 1px 5px rgba(0, 0, 0, 0.7);
+}
+.Destination .row .foto .img p:hover {
+  background-color: crimson;
+  cursor: pointer;
 }
 
 .Destination .row .foto .img {
-  background-image: url(gambar/1.jpg);
-  background-size: cover;
-  background-repeat: repeat;
   width: 18rem;
   height: 10rem;
   display: block;
   position: relative;
+  border-radius: 0.5rem;
+}
+
+.Destination .row .foto .img.gambar1 {
+  background-image: url(gambar/1.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.Destination .row .foto .img.gambar2 {
+  background-image: url(Destination/bali.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.Destination .row .foto .img.gambar3 {
+  background-image: url(Destination/GIli\ Trawang\ .jpg);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.Destination .row .foto .img.gambar4 {
+  background-image: url(Destination/Labuan\ Bajo.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.Destination .row .foto .img.gambar5 {
+  background-image: url(Destination/lombok.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.Destination .row .foto .img.gambar6 {
+  background-image: url(Destination/wakatobi.jpg);
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 .Destination .row .foto .img p {
@@ -257,6 +301,134 @@ body {
   margin-right: 3rem;
 }
 
+/* Contact */
+
+.Contact {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, #ddd 20%, #f6f6ee);
+}
+
+.Contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.Contact .row .registrasi {
+  flex: 1 1 25rem;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+}
+
+.Contact .row .registrasi form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.Contact .row .registrasi form .input {
+  width: 25rem;
+
+  margin-bottom: 1rem;
+}
+.Contact .row .registrasi form label {
+  line-height: 2;
+}
+
+.Contact .row .registrasi form input {
+  width: 25rem;
+  padding: 1rem;
+  border: 1px solid rgb(136, 135, 135);
+  text-indent: 1rem;
+  font-size: 1.3rem;
+}
+
+.Contact .row .registrasi form .btn {
+  padding: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #30e3df;
+  color: #ffefef;
+  width: 10rem;
+  margin-top: 1rem;
+  font-family: "Indie Flower", cursive;
+  font-weight: 700;
+  border-radius: 0.2rem;
+  transition: 0.3s ease-in;
+}
+
+.Contact .row .registrasi form .btn:hover {
+  background-color: coral;
+}
+
+.Contact .row .informasi {
+  flex: 1 1 25rem;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.3rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Contact .row .informasi .img img {
+  width: 90%;
+  filter: contrast(100%) brightness(150%) saturate(150%);
+  border-radius: 5%;
+  border: 1px solid #948f8f;
+}
+
+.Contact .row .informasi .img p {
+  opacity: 1;
+  font-size: 1rem;
+  z-index: 199;
+  font-family: "Indie Flower", cursive;
+}
+
+.Contact .row .informasi .img img:hover {
+  filter: grayscale(100);
+}
+
+/* footer */
+
+footer {
+  background-color: #62b6b7;
+  text-align: center;
+  padding: 0 1rem 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  margin: 1rem;
+  color: #fff;
+}
+
+footer .socials a:hover {
+  color: #30e3df;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: #139483;
+  font-weight: 700;
+}
+
 /* media query */
 
 @media (max-width: 1366px) {
@@ -277,6 +449,19 @@ body {
     filter: contrast(110%);
     border-radius: 0.3rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  .Contact .row .informasi {
+    min-width: 20rem;
+    flex: 1;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.3rem;
   }
 }
 
@@ -311,8 +496,13 @@ body {
     padding: 3rem;
     flex-wrap: wrap;
   }
+
+  .Destination > p {
+    font-size: 1.5rem;
+  }
   .Destination .row .foto {
     margin-bottom: 2rem;
+    font-size: 1.5rem;
   }
 
   .Destination .row .foto .img {
@@ -322,6 +512,19 @@ body {
     width: 28rem;
     height: 20rem;
     display: block;
+  }
+
+  .Contact .row .informasi {
+    min-width: 25rem;
+    flex: 1;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.3rem;
   }
 }
 
@@ -337,5 +540,12 @@ body {
     width: 28rem;
     height: 20rem;
     display: block;
+  }
+
+  .Contact .row .informasi .img img {
+    width: 100%;
+    filter: contrast(100%) brightness(150%) saturate(150%);
+    border-radius: 5%;
+    border: 1px solid #948f8f;
   }
 }
